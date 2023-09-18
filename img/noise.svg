@@ -1,0 +1,29 @@
+        <svg style="display: none;">
+            <defs>
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency="0.7,0.8"
+                  seed="0"
+                  type="fractalNoise"
+                  result="static"
+                >
+                    <animate
+                        attributeName="seed"
+                        values="0;100"
+                        dur="1-00ms"
+                        repeatCount="1" 
+                        begin="card.mouseover"                           
+                    />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                  <animate
+                    attributeName="scale"
+                    values="0;50;0"
+                    dur="1000ms"
+                    repeatCount="1" 
+                    begin="card.mouseover"                           
+                  />
+                </feDisplacementMap>
+              </filter>  
+            </defs>
+        </svg>    

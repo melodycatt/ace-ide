@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>pee</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style2.css">
+        <script src="script2.js" defer></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="leftButton" class="img-bttn">
+            L
+        </div>
+        <div id="cards">
+            <div class="card">
+                <img class="cardimg" src="https://images.unsplash.com/photo-1694949043973-1b51337cb8ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"/>
+            </div>
+            <div class="card">
+                <img class="cardimg" src="https://images.unsplash.com/photo-1694843622261-6acd040beff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+            </div>
+            <div class="card">
+                <img class="cardimg" src="https://images.unsplash.com/photo-1693307418199-4af8f979e50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+            </div>
+            <div class="card">
+                <img class="cardimg" src="https://images.unsplash.com/photo-1693054367206-79db6824ef17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+            </div>
+        </div>
+        <div id="rightButton" class="img-bttn">
+            R
+        </div>
+        <svg style="display: none;" id="svgTemplate">
+            <defs>
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency="0.7,0.8"
+                  seed="0"
+                  type="fractalNoise"
+                  result="static"
+                >
+                    <animate
+                        attributeName="seed"
+                        values="0;100"
+                        dur="800ms"
+                        repeatCount="1" 
+                        begin="card0.mouseover"                           
+                    />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                  <animate
+                    attributeName="scale"
+                    values="0;50;0"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="card0.mouseover"                           
+                  />
+                </feDisplacementMap>
+              </filter>  
+            </defs>
+        </svg>    
+    </body>
+</html>
