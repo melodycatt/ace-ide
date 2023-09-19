@@ -36,7 +36,19 @@ body {
     cursor: pointer;
     overflow: hidden;
     position: absolute;
-    transition: translate 0.8s ease, rotate 0.8s ease;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+.deadcard {
+    width: 200px;
+    aspect-ratio: 2 / 3;
+    border: 0.25rem solid rgb(255 255 255);
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
 }
 
 #cards {
@@ -52,10 +64,10 @@ body {
     border-radius: 15px;
 }
 
-/*.cardimg:hover {
+.cardimg:hover {
     filter: var(--filter);
     animation: pulse 1s ease-in-out;
-}*/
+}
 
 .img-bttn {
     width: 50px;
