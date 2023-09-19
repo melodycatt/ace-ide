@@ -184,3 +184,88 @@ html, body {
     flex-wrap: wrap;
     transition-duration: 1s;
 }
+
+@keyframes pulse {
+    from, to {
+    scale: 1;
+    }
+    
+    50% {
+    scale: 1.08;
+    }
+}
+
+.card {
+    width: 350px;
+    aspect-ratio: 2 / 3;
+    border: 0.25rem solid rgb(255 255 255);
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+.deadcard {
+    width: 350px;
+    aspect-ratio: 2 / 3;
+    border: 0.25rem solid rgb(255 255 255);
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+#cards {
+    aspect-ratio: 2/3;
+    width: 350px;
+    margin: 200px;
+}
+
+.cardimg {  
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cardimg:hover {
+    filter: var(--filter);
+    animation: pulse 1s ease-in-out;
+}
+
+.img-bttn {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(25, 25, 35);
+    border-radius: 50%;  
+    transition-duration: 0.5s;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.img-bttn:hover {
+    scale: 1.05;
+    background-color: rgb(38, 38, 54);
+}
+
+#cardsflex {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.page-content {
+    display: inline-block;
+    width: 50%;
+}

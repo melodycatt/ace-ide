@@ -44,10 +44,63 @@
                 <button class="linkbutton">Tell Me More. ↳</button>
             </section>
             <section id="page1" class="inactive page">
-                <div class="title">Catered to beginners</div>
-                <div class="subtitle">Ace aims to be an IDE which makes it easy for people to learn to code. Coding is extremely difficult to understand at first, so Ace uses tutorials, explanations and simple UX to make the process easier.</div>
-                <button class="linkbutton">What if I'm advanced? ↳</button>
+                <div class="page-content">
+                    <div class="title">Catered to beginners</div>
+                    <div class="subtitle">Ace aims to be an IDE which makes it easy for people to learn to code. Coding is extremely difficult to understand at first, so Ace uses tutorials, explanations and simple UX to make the process easier.</div>
+                    <button class="linkbutton">What if I'm advanced? ↳</button>
+                </div>
+                <div id="cardsflex">
+                    <div id="leftButton" class="img-bttn">
+                        L
+                    </div>
+                    <div id="cards">
+                        <div class="card">
+                            <img class="cardimg" src="./img/concept/fileexplorer.png"/>
+                        </div>
+                        <div class="card">
+                            <img class="cardimg" src="https://images.unsplash.com/photo-1694843622261-6acd040beff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                        </div>
+                        <div class="card">
+                            <img class="cardimg" src="https://images.unsplash.com/photo-1693307418199-4af8f979e50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                        </div>
+                        <div class="card">
+                            <img class="cardimg" src="https://images.unsplash.com/photo-1693054367206-79db6824ef17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                        </div>
+                    </div>
+                    <div id="rightButton" class="img-bttn">
+                        R
+                    </div>        
+                </div>
             </section>
         </section>
+        <svg style="display: none;" id="svgTemplate">
+            <defs>
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency="0.7,0.8"
+                  seed="0"
+                  type="fractalNoise"
+                  result="static"
+                >
+                    <animate
+                        attributeName="seed"
+                        values="0;100"
+                        dur="800ms"
+                        repeatCount="1" 
+                        begin="card0.mouseover"                           
+                    />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                  <animate
+                    attributeName="scale"
+                    values="0;50;0"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="card0.mouseover"                           
+                  />
+                </feDisplacementMap>
+              </filter>  
+            </defs>
+        </svg>    
     </body>
 </html>
