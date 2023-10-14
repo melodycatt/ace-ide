@@ -1,0 +1,31 @@
+.linkbutton {
+    display: inline-flex;
+    width: 250px;
+    height: 100px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#osdiv {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 100px;
+    font-family: 'Darkmode Trial', sans-serif;
+    color: #00A14B;
+}
+
+#downloads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    align-items: center;
+    flex-wrap: nowrap;
+}

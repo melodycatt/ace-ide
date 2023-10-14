@@ -10,28 +10,34 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="fonts/Darkmode Mono Off/stylesheet.css">
         <link rel="stylesheet" href="fonts/Darkmode Trial/stylesheet.css">
         <link rel="stylesheet" href="fonts/MonacoB/stylesheet.css">
-        <script src="script.js" defer></script>
+        <script src="js/script.js" defer></script>
+        <script src="js/mode.js" defer></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <nav id="sidenav">
             <div id="sidelogowrapper">
-                <img id="sidelogospade" src="img/logoSimple copy.png">
+                <a href="./index.html"><img id="sidelogospade" src="img/logoSimple copy.png"></a>
                 <img id="sidelogobar" src="img/logoSimple.png" />
                 <div id="navitems">          
                     <div id="sideiconswrapper">
-                        <div class="sideicon">
-                            <img src="img/icons/download.png" alt="Download" class="sideicon"/>
-                        </div>
-                        <div class="sideicon">
-                            <img src="img/icons/image.png" alt="Concept Images" class="sideicon"/>
-                        </div>
+                        <a href="./download.html">
+                            <div class="sideicon" onclick="pageChange('page2')">
+                                <img src="img/icons/download.png" alt="Download" class="sideicon"/>
+                            </div>
+                        </a>
+                        <a href="./download.html">
+                            <div class="sideicon">
+                                <img src="img/icons/image.png" alt="Concept Images" class="sideicon"/>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div id="obscuring-block"></div>
@@ -41,13 +47,13 @@
             <section id="start" class="active page">
                 <div class="title">Ace IDE.</div>
                 <div class="subtitle">A powerful source code editor for beginners and experts alike.</div>
-                <button class="linkbutton">Tell Me More. ↳</button>
+                <button class="linkbutton" onclick="pageChange('page1')">Tell Me More. ↳</button>
             </section>
             <section id="page1" class="inactive page">
                 <div class="page-content">
                     <div class="title">Catered to beginners</div>
                     <div class="subtitle">Ace aims to be an IDE which makes it easy for people to learn to code. Coding is extremely difficult to understand at first, so Ace uses tutorials, explanations and simple UX to make the process easier.</div>
-                    <button class="linkbutton">What if I'm advanced? ↳</button>
+                    <button class="linkbutton" onclick="pageChange('page1')">What if I'm advanced? ↳</button>
                 </div>
                 <div id="cardsflex">
                     <div id="leftButton" class="img-bttn">
@@ -72,6 +78,11 @@
                     </div>        
                 </div>
             </section>
+            <section id="page2" class="inactive page">
+                <div class="title">Ace IDE.</div>
+                <div class="subtitle">A powerful source code editor for beginners and experts alike.</div>
+                <button class="linkbutton" id="bigpoo">Tell Me More. ↳</button>
+            </section>    
         </section>
         <svg style="display: none;" id="svgTemplate">
             <defs>
@@ -101,6 +112,11 @@
                 </feDisplacementMap>
               </filter>  
             </defs>
-        </svg>    
+        </svg>   
+        <div id="modeswitcher" data-mode="light">
+            <img id="modeicon" src="img/icons/dark.png" />
+            <div id="modecircle"></div>
+        </div>
+ 
     </body>
 </html>

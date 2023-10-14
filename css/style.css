@@ -84,6 +84,7 @@ html, body {
     z-index: 2;
     left: 0;
     translate: 0 -140.5px;
+    transition: all 0.5s ease-in, background-color 0s !important;
     transition-duration: 0.5s;
     transition-timing-function: ease-in;
 }
@@ -116,6 +117,7 @@ html, body {
     display: inline-block;
     height: min-content;
     width: min-content;
+    position: fixed;
 }
 
 #sideiconswrapper {
@@ -173,16 +175,15 @@ html, body {
     height: 100%; 
     width: 120px; 
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     bottom: 0;
-    background-color: inherit; 
     overflow-x: visible; 
     padding-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    transition-duration: 1s;
+    background-color: inherit; 
 }
 
 @keyframes pulse {
@@ -239,7 +240,7 @@ html, body {
 .img-bttn {
     width: 100px;
     height: 100px;
-    background-color: rgb(25, 25, 35);
+    background-color: whitesmoke;
     border-radius: 50%;  
     transition-duration: 0.5s;
     color: white;
@@ -251,11 +252,12 @@ html, body {
     font-weight: bold;
     font-size: 40px;
     cursor: pointer;
+    color: #00A14B;
 }
 
 .img-bttn:hover {
     scale: 1.05;
-    background-color: rgb(38, 38, 54);
+    background-color: rgb(203, 203, 203);
 }
 
 #cardsflex {
@@ -263,9 +265,66 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 100%;
+    background-color: #007d3b;
 }
 
 .page-content {
     display: inline-block;
     width: 50%;
+}
+
+#modeswitcher {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#modeicon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: invert(49%) sepia(82%) saturate(5723%) hue-rotate(134deg) brightness(98%) contrast(101%);
+}
+
+#modeswitcher[data-mode = 'light'] #modecircle {
+    background-color: black;
+}
+
+#modeswitcher[data-mode = 'dark'] #modecircle {
+    background-color: white;
+}
+
+#modecircle {
+    width: 0;
+    aspect-ratio: 1/1;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    position: fixed;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#modeswitcher:hover #modecircle {
+    width: 300px;
+}
+
+#modeswitcher:hover {
+    scale: 1.15;
+}
+
+body {
+    transition-duration: 0;
+}
+
+html {
+    zoom: .75;
 }
